@@ -15,10 +15,7 @@ postBtn.addEventListener('click',function(){
         arr.push(inputField.value);
         
         common();
-
     }
-
-
 })
 function common(){
     ul.innerHTML="";
