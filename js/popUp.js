@@ -4,5 +4,5 @@ const overly=document.querySelector('.overly');
 
 
 document.querySelector('#pupUpBtn').addEventListener('click',function(){
-    overly.style.display='block';
+    overly.style.display='flex';
 })
