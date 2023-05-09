@@ -3,9 +3,6 @@ const textArr=Array.from(text);
 console.log(textArr);
 const color=['red','blue','orange','prink','yellow','green','tomato','syne']
 let typingTextArr='';
-
-
-
 textArr.map((item) =>{
     function isInViewPort(){
         const viewport=item.getBoundingClientRect();
