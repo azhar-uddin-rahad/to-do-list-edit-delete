@@ -1,19 +1,26 @@
 const text=document.querySelector('.text');
 const typingText=text.innerText;
+let textArr="";
+console.log(textArr);
 text.innerText ="";
-
 console.log();
 let count=0;
 function typeJs(){
-    text.innerHTML +=typingText.charAt(count);
-    count++;
-    if(typingText.length == count){
-        console.log(count)
-        clearInterval(stop)
+    
+    if(count < typingText.length){
+        text.innerHTML +=typingText.charAt(count);
+        count++;
+        textArr=typingText.split('');
+    }
+    else{
+        console.log(textArr);
+        textArr.pop();
+        text.innerHTML=textArr.join("");
+        if(textArr.length == 0){
+            count=0;
+        }
     }
 }
-
-
 
 const stop=setInterval(()=>{
     typeJs()
