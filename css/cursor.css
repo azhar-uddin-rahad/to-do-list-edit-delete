@@ -1,0 +1,25 @@
+.text{
+    position: relative;
+}
+.text::after{
+    content: " ";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    transition: 0.4s;
+    display: inline-block;
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+    from{
+        height: 100%;
+    }
+    to{
+        height: 0;
+    }
+    
+}

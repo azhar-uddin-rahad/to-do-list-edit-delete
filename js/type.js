@@ -21,7 +21,7 @@ function typeJs(){
         }
     }
 }
-
+console.log()
 const stop=setInterval(()=>{
     typeJs()
-},400)
+},text.dataset.speed)
