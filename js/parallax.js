@@ -9,3 +9,10 @@ window.addEventListener('mousemove',function(event){
     two.style.top= (event.clientY/15) + 'px';
 
 })
+
+let size=1;
+window.addEventListener("scroll",function(event){
+    size++;
+    two.style.width = size + '%';
+
+})
