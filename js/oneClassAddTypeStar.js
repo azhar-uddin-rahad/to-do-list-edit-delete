@@ -1,6 +1,7 @@
 const text=document.querySelectorAll('.text');
 const textArr=Array.from(text);
 console.log(textArr);
+const color=['red','blue','orange','prink','yellow','green','tomato','syne']
 let typingTextArr='';
 
 textArr.map((item) =>{
@@ -10,10 +11,9 @@ textArr.map((item) =>{
     let count=0;
     function typeJS(){
         if(count < typingTextStore.length){
-            item.innerHTML += typingTextStore.charAt(count);
+            item.innerHTML += `<span style="color:${color[count]}">${typingTextStore.charAt(count)}</span>`;
             count ++;
-           typingTextArr=typingTextStore.split('');
-          
+           typingTextArr=typingTextStore.split('');  
         }
          else{
             console.log(typingTextArr)
@@ -26,7 +26,7 @@ textArr.map((item) =>{
     }
     setInterval(()=>{
         typeJS()
-    },500)
+    },item.dataset.speed)
     })
    
 
